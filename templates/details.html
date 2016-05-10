@@ -1,0 +1,222 @@
+<body>
+    <div id="main-nav">
+        <div class="container clearfix">
+            <a href="/Can-I-Reach-Challenger/public" class="topbar-brand pull-left">Can I Reach Challenger?</a>
+
+            <nav class="topbar-nav pull-right">
+                <ul class="unstyled">
+                  <li><a href="/Can-I-Reach-Challenger/public">Home</a></li>
+                    <li><a href="/Can-I-Reach-Challenger/public/about">About</a></li>
+                    <li><a href="/Can-I-Reach-Challenger/public/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <section id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-md-offset-6 summoner-details">
+                    <img class="summoner-icon" src="http://ddragon.leagueoflegends.com/cdn/6.7.1/img/profileicon/{{sumInfo.summoner_profileIcon}}.png" alt="Summoner Icon">
+                    <h2>{{$root.sumName}}<span class="badge">{{$root.$sumRegion}}</span></h2>
+                    <h3>{{tier}} {{division}}<span>{{points}} LP</span></h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="details">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <header>
+                        <h2>You are here </h2>
+                    </header>
+
+                    <img src="/Can-I-Reach-Challenger/public/assets/img/tiers/{{pathToTier}}" alt="">
+                </div>
+
+                <div class="col-md-8 col-md-offset-8">
+                    <header>
+                        <h2>Your goal</h2>
+                    </header>
+
+                    <img src="/Can-I-Reach-Challenger/public/assets/img/tiers/challenger.png" alt="">
+                </div>
+            </div><!-- intro -->
+
+            <div class="row basic-stats">
+                <header>
+                    <h3>Basic Stats</h3>
+                </header>
+
+                <div class="col-md-8">
+                    <ul class="unstyled">
+                        <li>{{KDA}}</li>
+                        <li>{{sumInfo.average_winRate}}%</li>
+                        <li>{{sumInfo.average_timePlayed}} min</li>
+                        <li>{{sumInfo.average_goldEarned}}</li>
+                        <li>{{sumInfo.average_wardPlaced}}</li>
+                        <li>{{sumInfo.average_wardKilled}}</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-8">
+                    <ul class="unstyled">
+                        <li><strong>KDA</strong></li>
+                        <li><strong>Win Rate</strong></li>
+                        <li><strong>Game Lenght</strong></li>
+                        <li><strong>Gold Earned</strong></li>
+                        <li><strong>Wards Placed</strong></li>
+                        <li><strong>Wards Destroyed</strong></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-8">
+                    <ul class="unstyled">
+                        <li>{{KDAChallenger}}</li>
+                        <li>{{sumInfo.challenger_average_winRate}}%</li>
+                        <li>{{sumInfo.challenger_average_timePlayed}} min</li>
+                        <li>{{sumInfo.challenger_average_goldEarned}}</li>
+                        <li>{{sumInfo.challenger_average_wardPlaced}}</li>
+                        <li>{{sumInfo.challenger_average_wardKilled}}</li>
+                    </ul>
+                </div>
+            </div><!-- basic stats -->
+
+            <div class="row">
+                <header>
+                    <h3>Creep Score Comparison</h3>
+                </header>
+
+                <div class="col-md-16 col-md-offset-4">
+                    <div class="row">
+                        <div class="col-md-24">
+                            <div class="legend-wrapper">
+                                <div class="legend">
+                                    <table>
+                                        <tr>
+                                            <th class="legend-1"></th>
+                                            <td>You</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th class="legend-2"></th>
+                                            <td>Challenger</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div data-ac-chart="'bar'" data-ac-data="data" data-ac-config="config" class="chart col-md-24"></div>
+                    </div>
+                </div>
+            </div><!-- creep score -->
+
+            <div class="row">
+                <header>
+                    <h3 style="margin-bottom:35px;">Avg. Damage Dealt to Champions</h3>
+                </header>
+
+                <div class="col-md-20 col-md-offset-2">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div class="legend-wrapper legend-pie">
+                                <div class="legend">
+                                    <table>
+                                        <tr>
+                                            <th class="legend-3"></th>
+                                            <td>You</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th class="legend-4"></th>
+                                            <td>Your team</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div data-ac-chart="'pie'" data-ac-data="informationSummoner" data-ac-config="configPie" class="c-pie"></div>
+                        </div>
+
+                        <div class="col-md-10 col-md-offset-4">
+                            <div class="legend-wrapper legend-pie">
+                                <div class="legend">
+                                    <table>
+                                        <tr>
+                                            <th class="legend-5"></th>
+                                            <td>Challenger</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th class="legend-6"></th>
+                                            <td>Challenger team</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div data-ac-chart="'pie'" data-ac-data="informationChallenger" data-ac-config="configPieChallenger" class="c-pie"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- damage dealt -->
+
+            <div class="row">
+                <header>
+                    <h3>Summary</h3>
+                </header>
+
+                <div class="col-md-20  col-md-offset-2">
+                    <ul>
+                        <li>
+                            <p>
+                                <b>About your KDA: </b>{{KDAmessage}}
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                              <b>About your Win Rate: </b> {{winRateMessage}}
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                               <b>About your Gold Earned: </b>{{goldEarnedMessage}}
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <b>About your Wards: </b> {{wardPlacedMessage}}
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <b>About your Vision Control (remove wards): </b> {{wardKillMessage}}
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <b>About your Farming: </b> {{farmingMessage}}
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- summary -->
+        </div>
+    </section>
+
+    <section id="footer">
+        <footer>
+            <div class="container">
+                <p><strong>Can I Reach Challenger</strong> isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.</p>
+                <span>© 2016 - Made with <i class="fa fa-heart" aria-hidden="true"></i></span>
+            </div>
+        </footer>
+    </section>
+</body>

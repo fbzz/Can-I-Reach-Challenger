@@ -1,0 +1,101 @@
+<body>
+    <div id="main-nav">
+        <div class="container clearfix">
+            <a href="/Can-I-Reach-Challenger/public" class="topbar-brand pull-left">Can I Reach Challenger?</a>
+
+            <nav class="topbar-nav pull-right">
+                <ul class="unstyled">
+                    <li><a href="/Can-I-Reach-Challenger/public">Home</a></li>
+                    <li><a href="/Can-I-Reach-Challenger/public/about">About</a></li>
+                    <li><a href="/Can-I-Reach-Challenger/public/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <section id="hero">
+        <div class="spinner" ng-if="loading == true">
+            <div class="spinner-item item1"></div>
+            <div class="spinner-item item2"></div>
+            <div class="spinner-item item3"></div>
+            <div class="spinner-item item4"></div>
+        </div>
+
+        <div class="form-wrapper" ng-show="loading != true">
+            <form action="">
+                <div class="form-group">
+                    <input ng-model="sumName" type="text" placeholder="Your summoner name">
+
+                    <select ng-model="sumRegion">
+                        <option selected>BR</option>
+                        <option>EUW</option>
+                        <option>EUNE</option>
+                        <option>JP</option>
+                        <option>KR</option>
+                        <option>LAN</option>
+                        <option>LAS</option>
+                        <option>NA</option>
+                        <option>OCE</option>
+                        <option>RU</option>
+                        <option>TR</option>
+                    </select>
+                </div>
+
+                <a ng-click="summonerSearch(sumName, sumRegion)" class="btn-hero pull-right">
+                    <i class="fa fa-arrow-right"></i>
+                </a>
+            </form>
+        </div>
+    </section>
+
+    <section id="how-to">
+        <div class="container">
+            <h2>HOW IT WORKS</h2>
+
+            <div class="row">
+                 <div class="col-md-9 hiw-desc">
+                    <i class="fa fa-bar-chart"></i>
+                    <h3>Compare your stats to challenger players</h3>
+                    <p>Get detailed information about your ranked games and compare yourself to some of the best players in your region.</p>
+                </div>
+
+                <div class="col-md-9 col-md-offset-2">
+                    <img src="/Can-I-Reach-Challenger/public/assets/img/browser-1.png" alt="Creep Score Comparison Chart">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-9">
+                    <img src="/Can-I-Reach-Challenger/public/assets/img/browser-2.png" alt="Summary list">
+                </div>
+
+                <div class="col-md-9 col-md-offset-2 hiw-desc">
+                    <i class="fa fa-list"></i>
+                    <h3>Tips to improve</h3>
+                    <p>Receive feedback and nice tips to improve based on your needs.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-9 hiw-desc">
+                    <i class="fa fa-star"></i>
+                    <h3>Reach challenger!</h3>
+                    <p>Hoodie small batch flexitarian whatever. Skateboard DIY portland, godard cliche fixie kickstarter bushwick viral synth. Synth mlkshk heirloom scenester trust fund lumbersexual.</p>
+                </div>
+
+                <div class="col-md-9 col-md-offset-2">
+                    <img src="/Can-I-Reach-Challenger/public/assets/img/browser-3.png" alt="You've been promoted to Challenger!">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer">
+        <footer>
+            <div class="container">
+                <p><strong>Can I Reach Challenger</strong> isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.</p>
+                <span>© 2016 - Made with <i class="fa fa-heart" aria-hidden="true"></i></span>
+            </div>
+        </footer>
+    </section>
+</body>

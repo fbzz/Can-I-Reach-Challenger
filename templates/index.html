@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="/Can-I-Reach-Challenger/public/js/angular.min.js"></script>
+    <script src="/Can-I-Reach-Challenger/public/js/app.js"></script>
+     <script src="/Can-I-Reach-Challenger/public/js/angular-route.min.js"></script>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<body>
+<script>
+</script>
+
+<div ng-if="loading == false">
+  <ul>
+    <li ng-repeat="x in products">{{x}}</li>
+  </ul>
+{{teste}}
+<pre>{{sumInfo}}</pre>
+<a ng-click="back()">Back</a>
+</div>
+</body>
+</html>
